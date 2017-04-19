@@ -60,7 +60,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data\DataReader.cs" />
-    <Compile Include="DemoQARegistrationTests.cs" />
+    <Compile Include="BlogRegistrationTests.cs" />
     <Compile Include="Models\RegistrationUser.cs" />
     <Compile Include="Pages\BasePage.cs" />
     <Compile Include="Pages\RegistrationPage\RegistrationPage.cs" />

@@ -10,7 +10,7 @@
     using Tests.Utilities;
 
     [TestFixture]
-    public class DemoQARegistrationTests
+    public class BlogRegistrationTests
     {
         private IWebDriver driver;
 
