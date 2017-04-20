@@ -62,6 +62,7 @@
     <Compile Include="BlogCreateArticleTests.cs" />
     <Compile Include="Data\DataReader.cs" />
     <Compile Include="BlogRegistrationTests.cs" />
+   <Compile Include="Models\LoginUser.cs" />
     <Compile Include="Models\CreateArticle.cs" />
     <Compile Include="Models\RegistrationUser.cs" />
     <Compile Include="Pages\BasePage.cs" />
@@ -69,6 +70,10 @@
     <Compile Include="Pages\CreateArticlePage\CreateArticlePageAsserter.cs" />
     <Compile Include="Pages\CreateArticlePage\CreateArticlePageConstants.cs" />
     <Compile Include="Pages\CreateArticlePage\CreateArticlePageMap.cs" />
+    <Compile Include="Pages\LoginPage\LoginPage.cs" />
+    <Compile Include="Pages\LoginPage\LoginPageAsserter.cs" />
+    <Compile Include="Pages\LoginPage\LoginPageConstants.cs" />
+    <Compile Include="Pages\LoginPage\LoginPageMap.cs" />
     <Compile Include="Pages\RegistrationPage\RegistrationPage.cs" />
     <Compile Include="Pages\RegistrationPage\RegistrationPageAsserter.cs" />
     <Compile Include="Pages\RegistrationPage\RegistrationPageConstants.cs" />

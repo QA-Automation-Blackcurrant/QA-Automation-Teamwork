@@ -52,7 +52,7 @@
         {
             get
             {
-                return this.driver.FindElement(By.XPath(Constants.SUBMIT_BUTTON_SELECTOR));
+                return this.driver.FindElement(By.XPath(Constants.REGISTER_BUTTON_SELECTOR));
             }
         }
 

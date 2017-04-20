@@ -11,7 +11,7 @@
         internal const string FULL_NAME_SELECTOR = "FullName";
         internal const string PASSWORD_SELECTOR = "Password";
         internal const string CONFIRM_PASSWORD_SELECTOR = "ConfirmPassword";
-        internal const string SUBMIT_BUTTON_SELECTOR = "/html/body/div[2]/div/div/form/div[6]/div/input";
+        internal const string REGISTER_BUTTON_SELECTOR = "/html/body/div[2]/div/div/form/div[6]/div/input";
         internal const string ERROR_EMAIL_SELECTOR = "/html/body/div[2]/div/div/form/div[1]/ul/li[1]";
 
         //// Messages
