@@ -1,12 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Tests.Pages.LoginPage
+﻿namespace Tests.Pages.LoginPage
 {
-    class LoginPageConstants
+    internal static class Constants
     {
+        //// Common
+        internal const string REGISTRATION_URL = "Account/Register/";
+        internal const int WAIT_SECCONDS = 20;
+
+        //// Selectors
+        internal const string MAINLOGIN_SELECTOR = "loginLink";
+        internal const string EMAIL_SELECTOR = "Email";
+        internal const string PASSWORD_SELECTOR = "Password";
+        internal const string REMEMBER_ME_BUTTON_SELECTOR = "/html/body/div[2]/div/div/form/div[3]/div/div/div/label";
+        internal const string LOGIN_BUTTON_SELECTOR = "/html/body/div[2]/div/div/form/div[4]/div/input";
+        internal const string ERROR_EMAIL_SELECTOR = "/html/body/div[2]/div/div/form/div[1]/div/span/span";
+        internal const string ERROR_PASSWORD_SELECTOR = "/html/body/div[2]/div/div/form/div[3]/div/span/span";
+        
+        //// Messages
+        internal const string ERROR_PASSWORD = "The Password field is required.";
+        internal const string ERROR_EMAIL = "The Email field is not a valid e-mail address.";
     }
 }
