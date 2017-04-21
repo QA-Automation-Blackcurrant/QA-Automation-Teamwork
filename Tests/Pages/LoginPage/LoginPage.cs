@@ -23,7 +23,7 @@
             this.Elements.MainButton.Click();
             this.Elements.Email.Type(user.Email);
             this.Elements.Password.Type(user.Password);
-            this.Elements.RememberMe.Type(user.RememberMe);
+            this.Elements.RememberMe.Click();
             this.Elements.LogInButton.Click();
         }
     }
