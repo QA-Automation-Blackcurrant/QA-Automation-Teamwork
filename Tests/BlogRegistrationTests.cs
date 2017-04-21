@@ -7,8 +7,7 @@
     using Data;
     using Models;
     using Pages.RegistrationPage;
-    using Tests.Utilities;
-    using Pages.LoginPage;
+    
 
     [TestFixture]
     public class BlogRegistrationTests
@@ -59,21 +58,6 @@
             //// Assert
             registrationPage.AssertInvalidEmailErrorMessage();
         }
-
-        [Test]
-        public void LoginWithoutEmail()
-        {
-            //// Arrange
-            var loginPage = new LoginPage(this.driver);
-            var dataReader = new DataReader<LoginUser>();
-            var user = dataReader.GetData(MethodBase.GetCurrentMethod().Name);
-
-            //// Act
-            loginPage.Open();
-            loginPage.SubmitForm(user);
-
-            //// Assert
-            loginPage.AssertEmailErrorMessage();
-        }
+    
     }
 }
