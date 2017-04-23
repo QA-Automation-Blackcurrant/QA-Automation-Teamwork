@@ -24,5 +24,11 @@ namespace Tests.Pages.LoginPage
             Assert.IsTrue(page.Elements.ErrorMessagePassword.Displayed);
             StringAssert.Contains(Constants.ERROR_PASSWORD, page.Elements.ErrorMessagePassword.Text);
         }
+
+        public static void AssertConfirmation(this LoginPage page)
+        {
+            Assert.IsTrue(page.Elements.ConfirmationForLogin.Displayed);
+            StringAssert.Contains(Constants.CHECK_EMAIL, page.Elements.ConfirmationForLogin.Text);
+        }
     }
 }
