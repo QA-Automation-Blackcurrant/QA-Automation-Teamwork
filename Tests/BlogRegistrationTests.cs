@@ -7,7 +7,7 @@
     using Data;
     using Models;
     using Pages.RegistrationPage;
-    
+    using Tests.Utilities;
 
     [TestFixture]
     public class BlogRegistrationTests
@@ -21,11 +21,11 @@
             this.driver.Manage().Window.Maximize();
         }
 
-        //[TearDown]
-        //public void AfterEachTest()
-        //{
-        //    this.driver.log().Quit();
-        //}
+        [TearDown]
+        public void AfterEachTest()
+        {
+            this.driver.Log().Quit();
+        }
 
         [Test]
         public void RegistrationWithoutEmailShoulNotBeProcessed()

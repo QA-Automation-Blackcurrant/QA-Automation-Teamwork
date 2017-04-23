@@ -5,6 +5,7 @@ using System.Reflection;
 using Tests.Data;
 using Tests.Models;
 using Tests.Pages.LoginPage;
+using Tests.Utilities;
 
 namespace Tests
 {
@@ -20,11 +21,11 @@ namespace Tests
             this.driver.Manage().Window.Maximize();
         }
 
-        //[TearDown]
-        //public void AfterEachTest()
-        //{
-        //    this.driver.log().Quit();
-        //}
+        [TearDown]
+        public void AfterEachTest()
+        {
+            this.driver.Log().Quit();
+        }
 
         [Test]
         public void LoginWithoutEmail()
