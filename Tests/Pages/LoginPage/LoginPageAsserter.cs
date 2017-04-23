@@ -30,5 +30,11 @@ namespace Tests.Pages.LoginPage
             Assert.IsTrue(page.Elements.ConfirmationForLogin.Displayed);
             StringAssert.Contains(Constants.CHECK_EMAIL, page.Elements.ConfirmationForLogin.Text);
         }
+
+        public static void AssertIncorrectPassword(this LoginPage page)
+        {
+            Assert.IsTrue(page.Elements.PromptForIncorrectPassword.Displayed);
+            StringAssert.Contains(Constants.INCORRECT_PASSWORD, page.Elements.PromptForIncorrectPassword.Text);
+        }
     }
 }

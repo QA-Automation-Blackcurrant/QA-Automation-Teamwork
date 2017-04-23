@@ -15,12 +15,14 @@
         internal const string ERROR_EMAIL_SELECTOR = "/html/body/div[2]/div/div/form/div[1]/div/span/span";
         internal const string ERROR_PASSWORD_SELECTOR = "/html/body/div[2]/div/div/form/div[2]/div/span/span";
         internal const string ERROR_EMAIL_REQUIRED_SELECTOR = "/html/body/div[2]/div/div/form/div[1]/div/span/span";
-        internal const string SUCCESSFUL_LOGIN_SELECTOR = "//*[@id=\"logoutForm\"]/ul/li[3]/a";                     
+        internal const string SUCCESSFUL_LOGIN_SELECTOR = "//*[@id=\"logoutForm\"]/ul/li[3]/a";
+        internal const string INCORRECT_PASSWORD_SELECTOR = "/html/body/div[2]/div/div/form/div[1]/ul/li";
 
         //// Messages
         internal const string ERROR_PASSWORD = "The Password field is required.";
         internal const string ERROR_EMAIL = "The Email field is not a valid e-mail address.";
         internal const string ERROR_WITHOUT_EMAIL = "The Email field is required.";
         internal const string CHECK_EMAIL = "Hello admin@admin.com!";
+        internal const string INCORRECT_PASSWORD = "Invalid login attempt.";
     }
 }

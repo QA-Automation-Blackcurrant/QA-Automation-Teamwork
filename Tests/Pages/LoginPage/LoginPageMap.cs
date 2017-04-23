@@ -93,5 +93,14 @@ namespace Tests.Pages.LoginPage
                 return this.driver.FindElement(By.XPath(Constants.SUCCESSFUL_LOGIN_SELECTOR));
             }
         }
+
+        public IWebElement PromptForIncorrectPassword
+        {
+            get
+            {
+                this.wait.Until(ExpectedConditions.ElementExists(By.XPath(Constants.INCORRECT_PASSWORD_SELECTOR)));
+                return this.driver.FindElement(By.XPath(Constants.INCORRECT_PASSWORD_SELECTOR));
+            }
+        }
     }
 }

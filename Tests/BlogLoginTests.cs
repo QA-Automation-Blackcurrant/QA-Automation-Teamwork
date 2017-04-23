@@ -90,5 +90,21 @@ namespace Tests
             //// Assert
             loginPage.AssertPasswordErrorMessage();
         }
+
+        [Test]
+        public void LoginWithIncorrectPassword()
+        {
+            //// Arrange
+            var loginPage = new LoginPage(this.driver);
+            var dataReader = new DataReader<LoginUser>();
+            var user = dataReader.GetData(MethodBase.GetCurrentMethod().Name);
+
+            //// Act
+            loginPage.Open();
+            loginPage.SubmitForm(user);
+
+            //// Assert
+            loginPage.AssertIncorrectPassword();
+        }
     }
 }
