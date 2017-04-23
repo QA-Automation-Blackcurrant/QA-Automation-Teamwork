@@ -28,6 +28,22 @@ namespace Tests
         }
 
         [Test]
+        public void LoginAsAdmin()
+        {
+            //// Arrange
+            var loginPage = new LoginPage(this.driver);
+            var dataReader = new DataReader<LoginUser>();
+            var user = dataReader.GetData(MethodBase.GetCurrentMethod().Name);
+
+            //// Act
+            loginPage.Open();
+            loginPage.SubmitForm(user);
+
+            //// Assert
+            loginPage.AssertConfirmation();
+        }
+
+        [Test]
         public void LoginWithoutEmail()
         {
             //// Arrange
@@ -74,22 +90,5 @@ namespace Tests
             //// Assert
             loginPage.AssertPasswordErrorMessage();
         }
-
-        [Test]
-        public void SuccessfulLogIn()
-        {
-            //// Arrange
-            var loginPage = new LoginPage(this.driver);
-            var dataReader = new DataReader<LoginUser>();
-            var user = dataReader.GetData(MethodBase.GetCurrentMethod().Name);
-
-            //// Act
-            loginPage.Open();
-            loginPage.SubmitForm(user);
-
-            //// Assert
-            loginPage.AssertConfirmation();
-        }
-
     }
 }
