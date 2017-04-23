@@ -21,10 +21,10 @@ namespace Tests
         }
 
         //[TearDown]
-        // public void AfterEachTest()
-        // {
-        //     this.driver.Log().Quit();
-        // }
+        //public void AfterEachTest()
+        //{
+        //    this.driver.log().Quit();
+        //}
 
         [Test]
         public void LoginWithoutEmail()

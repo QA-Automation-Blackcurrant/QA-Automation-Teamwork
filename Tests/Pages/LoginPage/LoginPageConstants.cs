@@ -13,7 +13,7 @@
         internal const string REMEMBER_ME_BUTTON_SELECTOR = "/html/body/div[2]/div/div/form/div[3]/div/div/div/label";
         internal const string LOGIN_BUTTON_SELECTOR = "/html/body/div[2]/div/div/form/div[4]/div/input";
         internal const string ERROR_EMAIL_SELECTOR = "/html/body/div[2]/div/div/form/div[1]/div/span/span";
-        internal const string ERROR_PASSWORD_SELECTOR = "/html/body/div[2]/div/div/form/div[3]/div/span/span";
+        internal const string ERROR_PASSWORD_SELECTOR = "/html/body/div[2]/div/div/form/div[2]/div/span/span";
         internal const string ERROR_EMAIL_REQUIRED_SELECTOR = "/html/body/div[2]/div/div/form/div[1]/div/span/span";                      
 
         //// Messages

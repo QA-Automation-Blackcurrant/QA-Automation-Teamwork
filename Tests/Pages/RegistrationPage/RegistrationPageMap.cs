@@ -64,5 +64,16 @@
                 return this.driver.FindElement(By.XPath(Constants.ERROR_EMAIL_SELECTOR));
             }
         }
+
+        public IWebElement ErrorMessagesForPassword
+        {
+            get
+            {
+                this.wait.Until(ExpectedConditions.ElementExists(By.XPath(Constants.ERROR_PASSWORD_SELECTOR)));
+                return this.driver.FindElement(By.XPath(Constants.ERROR_PASSWORD_SELECTOR));
+            }
+        }
     }
 }
+
+

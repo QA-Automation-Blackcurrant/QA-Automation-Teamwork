@@ -17,8 +17,9 @@
         public static void Type(this IWebElement element, string text)
         {
             element.Clear();
+            if (text == null) text = string.Empty;
             element.SendKeys(text);
-        }
+        } 
 
         public static void ClickOnElements(this List<IWebElement> elements, string data)
         {

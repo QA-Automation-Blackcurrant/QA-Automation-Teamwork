@@ -15,5 +15,11 @@
             Assert.IsTrue(page.Elements.ErrorMessagesForEmail.Displayed);
             StringAssert.Contains(Constants.ERROR_REQUIRED, page.Elements.ErrorMessagesForEmail.Text);
         }
+
+        public static void AssertPasswordErrorMessage(this RegistrationPage page)
+        {
+            Assert.IsTrue(page.Elements.ErrorMessagesForPassword.Displayed);
+            StringAssert.Contains(Constants.ERROR_PASSWORD, page.Elements.ErrorMessagesForPassword.Text);
+        }
     }
 }

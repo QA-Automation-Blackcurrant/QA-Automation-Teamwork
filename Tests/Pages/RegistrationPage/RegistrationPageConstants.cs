@@ -13,9 +13,10 @@
         internal const string CONFIRM_PASSWORD_SELECTOR = "ConfirmPassword";
         internal const string REGISTER_BUTTON_SELECTOR = "/html/body/div[2]/div/div/form/div[6]/div/input";
         internal const string ERROR_EMAIL_SELECTOR = "/html/body/div[2]/div/div/form/div[1]/ul/li[1]";
-
+        internal const string ERROR_PASSWORD_SELECTOR = "/html/body/div[2]/div/div/form/div[1]/ul/li";
         //// Messages
         internal const string ERROR_REQUIRED = "The Email field is required.";
         internal const string ERROR_EMAIL = "The Email field is not a valid e-mail address.";
+        internal const string ERROR_PASSWORD = "The Password field is required.";
     }
 }
