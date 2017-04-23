@@ -1,12 +1,47 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Tests
+﻿namespace Tests
 {
+    using NUnit.Framework;
+    using OpenQA.Selenium;
+    using OpenQA.Selenium.Chrome;
+    using Tests.Data;
+    using Tests.Models;
+    using Tests.Pages.CreateArticlePage;
+    using Tests.Pages.LoginPage;
+    using Tests.Utilities;
+
     class BlogCreateArticleTests
     {
+        private IWebDriver driver;
+
+        [SetUp]
+        public void BeforeEachTest()
+        {
+            this.driver = new ChromeDriver();
+            this.driver.Manage().Window.Maximize();
+        }
+
+        [TearDown]
+        public void AfterEachTest()
+        {
+            this.driver.Log().Quit();
+        }
+
+        [Test]
+        public void OpenCreateArticleFormShouldBeProccessedCorrectly()
+        {
+            //// Arrange
+            var loginPage = new LoginPage(this.driver);
+            var createArticlePage = new CreateArticlePage(this.driver);
+            var dataReader = new DataReader<LoginUser>();
+            var user = dataReader.GetData("LoginAsAdmin");
+
+            //// Act
+            loginPage.Open();
+            loginPage.SubmitForm(user);
+            createArticlePage.Open();
+
+            //// Assert
+            createArticlePage.AssertThatPageIsOpened();
+        }
     }
 }

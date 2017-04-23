@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Tests.Pages.CreateArticlePage
+﻿namespace Tests.Pages.CreateArticlePage
 {
-    class CreateArticlePageAsserter
+    using NUnit.Framework;
+
+    public static class CreateArticlePageAsserter
     {
+        public static void AssertThatPageIsOpened(this CreateArticlePage page)
+        {
+            Assert.IsTrue(page.Driver.Url.Contains(Constants.CREATE_ARTICLE_URL));
+        }
     }
 }
