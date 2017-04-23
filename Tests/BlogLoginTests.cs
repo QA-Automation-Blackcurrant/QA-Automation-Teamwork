@@ -39,7 +39,39 @@ namespace Tests
             loginPage.SubmitForm(user);
 
             //// Assert
+            loginPage.AssertWithoutEmailErrorMessage();
+        }
+
+        [Test]
+        public void LoginWithIncorrectEmail()
+        {
+            //// Arrange
+            var loginPage = new LoginPage(this.driver);
+            var dataReader = new DataReader<LoginUser>();
+            var user = dataReader.GetData(MethodBase.GetCurrentMethod().Name);
+
+            //// Act
+            loginPage.Open();
+            loginPage.SubmitForm(user);
+
+            //// Assert
             loginPage.AssertEmailErrorMessage();
+        }
+
+        [Test]
+        public void LoginWithoutPassword()
+        {
+            //// Arrange
+            var loginPage = new LoginPage(this.driver);
+            var dataReader = new DataReader<LoginUser>();
+            var user = dataReader.GetData(MethodBase.GetCurrentMethod().Name);
+
+            //// Act
+            loginPage.Open();
+            loginPage.SubmitForm(user);
+
+            //// Assert
+            loginPage.AssertPasswordErrorMessage();
         }
 
     }

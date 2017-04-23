@@ -13,10 +13,16 @@ namespace Tests.Pages.LoginPage
             StringAssert.Contains(Constants.ERROR_EMAIL, page.Elements.ErrorMessagesEmail.Text);
         }
 
+        public static void AssertWithoutEmailErrorMessage(this LoginPage page)
+        {
+            Assert.IsTrue(page.Elements.ErrorMessagesWithoutEmail.Displayed);
+            StringAssert.Contains(Constants.ERROR_WITHOUT_EMAIL, page.Elements.ErrorMessagesWithoutEmail.Text);
+        }
+
         public static void AssertPasswordErrorMessage(this LoginPage page)
         {
-            Assert.IsTrue(page.Elements.ErrorMessagesEmail.Displayed);
-            StringAssert.Contains(Constants.ERROR_PASSWORD, page.Elements.ErrorMessagesEmail.Text);
+            Assert.IsTrue(page.Elements.ErrorMessagePassword.Displayed);
+            StringAssert.Contains(Constants.ERROR_PASSWORD, page.Elements.ErrorMessagePassword.Text);
         }
     }
 }

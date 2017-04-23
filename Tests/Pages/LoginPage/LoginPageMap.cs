@@ -67,6 +67,15 @@ namespace Tests.Pages.LoginPage
             }
         }
 
+        public IWebElement ErrorMessagesWithoutEmail
+        {
+            get
+            {
+                this.wait.Until(ExpectedConditions.ElementExists(By.XPath(Constants.ERROR_EMAIL_SELECTOR)));
+                return this.driver.FindElement(By.XPath(Constants.ERROR_EMAIL_SELECTOR));
+            }
+        }
+
         public IWebElement ErrorMessagePassword
         {
             get
