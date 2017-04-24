@@ -75,5 +75,21 @@
             registrationPage.AssertPasswordErrorMessage();
         }
 
+        [Test]
+        public void RegistrationWithDifferentPasswords()
+        {
+            //// Arrange
+            var registrationPage = new RegistrationPage(this.driver);
+            var dataReader = new DataReader<RegistrationUser>();
+            var user = dataReader.GetData(MethodBase.GetCurrentMethod().Name);
+
+            //// Act
+            registrationPage.Open();
+            registrationPage.SubmitForm(user);
+
+            //// Assert
+            registrationPage.AssertDifferencePasswordErrorMessage();
+        }
+
     }
 }

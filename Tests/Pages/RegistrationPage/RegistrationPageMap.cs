@@ -73,6 +73,15 @@
                 return this.driver.FindElement(By.XPath(Constants.ERROR_PASSWORD_SELECTOR));
             }
         }
+
+        public IWebElement ErrorMessagesForDifferencePassword
+        {
+            get
+            {
+                this.wait.Until(ExpectedConditions.ElementExists(By.XPath(Constants.DIFFERENCE_BETWEEN_PASSWORDS_SELECTOR)));
+                return this.driver.FindElement(By.XPath(Constants.DIFFERENCE_BETWEEN_PASSWORDS_SELECTOR));
+            }
+        }
     }
 }
 
