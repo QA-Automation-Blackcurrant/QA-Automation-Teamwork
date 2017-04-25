@@ -82,6 +82,15 @@
                 return this.driver.FindElement(By.XPath(Constants.DIFFERENCE_BETWEEN_PASSWORDS_SELECTOR));
             }
         }
+
+        public IWebElement ErrorMessagesForMissingFullName
+        {
+            get
+            {
+                this.wait.Until(ExpectedConditions.ElementExists(By.XPath(Constants.ERROR_FULL_NAME_SELECTOR)));
+                return this.driver.FindElement(By.XPath(Constants.ERROR_FULL_NAME_SELECTOR));
+            }
+        }
     }
 }
 

@@ -27,5 +27,11 @@
             Assert.IsTrue(page.Elements.ErrorMessagesForDifferencePassword.Displayed);
             StringAssert.Contains(Constants.DIFFERENCE_BETWEEN_PASSWORDS, page.Elements.ErrorMessagesForDifferencePassword.Text);
         }
+
+        public static void AssertFullNameErrorMessage(this RegistrationPage page)
+        {
+            Assert.IsTrue(page.Elements.ErrorMessagesForMissingFullName.Displayed);
+            StringAssert.Contains(Constants.ERROR_FULL_NAME, page.Elements.ErrorMessagesForMissingFullName.Text);
+        }
     }
 }
