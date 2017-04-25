@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using OpenQA.Selenium;
+using Tests.Models;
 
 namespace Tests.Pages.CreateArticlePage
 {
@@ -20,5 +21,6 @@ namespace Tests.Pages.CreateArticlePage
                 return Constants.CREATE_ARTICLE_URL;
             }
         }
+        
     }
 }
