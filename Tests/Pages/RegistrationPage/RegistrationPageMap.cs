@@ -56,6 +56,14 @@
             }
         }
 
+        public IWebElement HelloUsername
+        {
+            get
+            {
+                return this.driver.FindElement(By.CssSelector(Constants.SUCCESSFUL_REGISTRATION_SELECTOR));
+            }
+        }
+
         public IWebElement ErrorMessagesForEmail
         {
             get

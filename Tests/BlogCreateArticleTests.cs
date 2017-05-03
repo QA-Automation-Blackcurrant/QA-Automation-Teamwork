@@ -3,8 +3,7 @@
     using NUnit.Framework;
     using OpenQA.Selenium;
     using OpenQA.Selenium.Chrome;
-    using Tests.Data;
-    using Tests.Models;
+
     using Tests.Pages.CreateArticlePage;
     using Tests.Pages.LoginPage;
     using Tests.Utilities;
@@ -32,12 +31,9 @@
             //// Arrange
             var loginPage = new LoginPage(this.driver);
             var createArticlePage = new CreateArticlePage(this.driver);
-            var dataReader = new DataReader<LoginUser>();
-            var user = dataReader.GetData("LoginAsAdmin");
 
             //// Act
-            loginPage.Open();
-            loginPage.SubmitForm(user);
+            loginPage.LoginAsUser();
             createArticlePage.Open();
 
             //// Assert

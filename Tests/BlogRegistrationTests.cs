@@ -1,12 +1,14 @@
 ﻿namespace Tests
 {
+    using System;
     using System.Reflection;
     using NUnit.Framework;
     using OpenQA.Selenium;
     using OpenQA.Selenium.Chrome;
-    using Data;
-    using Models;
-    using Pages.RegistrationPage;
+
+    using Tests.Data;
+    using Tests.Models;
+    using Tests.Pages.RegistrationPage;
     using Tests.Utilities;
 
     [TestFixture]
@@ -25,6 +27,20 @@
         public void AfterEachTest()
         {
             this.driver.Log().Quit();
+        }
+
+        [Test]
+        public void RegisterNewUserShouldProccessCorrectly()
+        {
+            //// Arrange
+            var registrationPage = new RegistrationPage(this.driver);
+            var name = Guid.NewGuid().ToString();
+
+            //// Act
+            registrationPage.RegisterUser(name);
+
+            //// Assert
+            registrationPage.AssertNewUserRegistration(name);
         }
 
         [Test]

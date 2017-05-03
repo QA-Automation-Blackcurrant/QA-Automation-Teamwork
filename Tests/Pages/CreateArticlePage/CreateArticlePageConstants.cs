@@ -13,7 +13,6 @@ namespace Tests.Pages.CreateArticlePage
         internal const int WAIT_SECCONDS = 20;
 
         //// Selectors
-        internal const string MAIN_CREATE_BUTTON_SELECTOR = "//*[@id=\"logoutForm\"]/ul/li[2]/a";
         internal const string CREATE_ARTICLE_BUTTON_SELECTOR = "/html/body/div[2]/div/div/form/div[4]/div/input";
         internal const string CANCEL_ARTICLE_BUTTON_SELECTOR = "/html/body/div[2]/div/div/form/div[4]/div/a";
         internal const string EDIT_BUTTON_SELECTOR = "/html/body/div[2]/div/article/footer/a[1]";

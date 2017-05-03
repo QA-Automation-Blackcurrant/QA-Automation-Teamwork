@@ -16,6 +16,8 @@
         internal const string ERROR_PASSWORD_SELECTOR = "/html/body/div[2]/div/div/form/div[1]/ul/li";
         internal const string DIFFERENCE_BETWEEN_PASSWORDS_SELECTOR = "/html/body/div[2]/div/div/form/div[1]/ul/li";
         internal const string ERROR_FULL_NAME_SELECTOR = "/html/body/div[2]/div/div/form/div[1]/ul/li";
+        internal const string SUCCESSFUL_REGISTRATION_SELECTOR = "a[href*='/Manage']";
+
         //// Messages
         internal const string ERROR_REQUIRED = "The Email field is required.";
         internal const string ERROR_EMAIL = "The Email field is not a valid e-mail address.";

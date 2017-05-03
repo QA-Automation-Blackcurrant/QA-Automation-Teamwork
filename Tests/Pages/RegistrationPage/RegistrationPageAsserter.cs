@@ -3,7 +3,13 @@
     using NUnit.Framework;
 
     public static class RegistrationPageAsserter
-    {       
+    {
+        public static void AssertNewUserRegistration(this RegistrationPage page, string name)
+        {
+            Assert.IsTrue(page.Elements.HelloUsername.Displayed);
+            Assert.IsTrue(page.Elements.HelloUsername.Text.Contains(name));
+        }
+
         public static void AssertInvalidEmailErrorMessage(this RegistrationPage page)
         {
             Assert.IsTrue(page.Elements.ErrorMessagesForEmail.Displayed);

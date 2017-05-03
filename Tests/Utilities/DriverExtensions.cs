@@ -41,7 +41,7 @@
 
         public static IWebDriver Log(this IWebDriver driver)
         {
-            var today = DateTime.Now.Date.ToShortDateString();
+            var today = DateTime.Now.Date.ToShortDateString().Replace('/', '-');
             var dirPath = ConfigurationManager.AppSettings["logsPath"].ToAbsolutePath() + today;
             if (!Directory.Exists(dirPath))
             {

@@ -15,7 +15,7 @@
         internal const string ERROR_EMAIL_SELECTOR = "/html/body/div[2]/div/div/form/div[1]/div/span/span";
         internal const string ERROR_PASSWORD_SELECTOR = "/html/body/div[2]/div/div/form/div[2]/div/span/span";
         internal const string ERROR_EMAIL_REQUIRED_SELECTOR = "/html/body/div[2]/div/div/form/div[1]/div/span/span";
-        internal const string SUCCESSFUL_LOGIN_SELECTOR = "//*[@id=\"logoutForm\"]/ul/li[3]/a";
+        internal const string SUCCESSFUL_LOGIN_SELECTOR = "a[href*='/Manage']";
         internal const string INCORRECT_PASSWORD_SELECTOR = "/html/body/div[2]/div/div/form/div[1]/ul/li";
 
         //// Messages

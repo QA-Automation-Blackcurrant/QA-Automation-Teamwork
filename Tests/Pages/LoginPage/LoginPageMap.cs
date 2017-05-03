@@ -89,8 +89,8 @@ namespace Tests.Pages.LoginPage
         {
             get
             {
-                this.wait.Until(ExpectedConditions.ElementExists(By.XPath(Constants.SUCCESSFUL_LOGIN_SELECTOR)));
-                return this.driver.FindElement(By.XPath(Constants.SUCCESSFUL_LOGIN_SELECTOR));
+                this.wait.Until(ExpectedConditions.ElementExists(By.CssSelector(Constants.SUCCESSFUL_LOGIN_SELECTOR)));
+                return this.driver.FindElement(By.CssSelector(Constants.SUCCESSFUL_LOGIN_SELECTOR));
             }
         }
 
