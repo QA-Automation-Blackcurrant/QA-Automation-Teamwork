@@ -9,5 +9,11 @@ namespace Tests.Models
 
         public string RememberMe { get; set; }
 
+        ////////////////////////////// Only for LoginWithCreatedArticle Test ///////////////////////////
+
+        public string Title { get; set; }
+
+        public string Content { get; set; }
+
     }   
 }

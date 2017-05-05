@@ -19,11 +19,11 @@
             this.driver.Manage().Window.Maximize();
         }
 
-        [TearDown]
-        public void AfterEachTest()
-        {
-            this.driver.Log().Quit();
-        }
+        //[TearDown]
+        //public void AfterEachTest()
+        //{
+        //    this.driver.Log().Quit();
+        //}
 
         [Test]
         public void OpenCreateArticleFormShouldBeProccessedCorrectly()

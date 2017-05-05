@@ -17,12 +17,27 @@
         internal const string ERROR_EMAIL_REQUIRED_SELECTOR = "/html/body/div[2]/div/div/form/div[1]/div/span/span";
         internal const string SUCCESSFUL_LOGIN_SELECTOR = "a[href*='/Manage']";
         internal const string INCORRECT_PASSWORD_SELECTOR = "/html/body/div[2]/div/div/form/div[1]/ul/li";
-
-        //// Messages
+               
+        //// Messages 
         internal const string ERROR_PASSWORD = "The Password field is required.";
         internal const string ERROR_EMAIL = "The Email field is not a valid e-mail address.";
         internal const string ERROR_WITHOUT_EMAIL = "The Email field is required.";
         internal const string CHECK_EMAIL = "Hello admin@admin.com!";
         internal const string INCORRECT_PASSWORD = "Invalid login attempt.";
+
+        ////////////////////////////// Only for LoginWithCreatedArticle Test ///////////////////////////
+
+        //// Selectors
+        internal const string CREATE_ARTICLE_BUTTON_SELECTOR = "//*[@id=\"logoutForm\"]/ul/li[2]/a";
+        internal const string TITLE_BUTTON_SELECTOR = "Title";
+        internal const string CONTENT_BUTTON_SELECTOR = "Content";
+        internal const string CREATE_BUTTON_SELECTOR = "/html/body/div[2]/div/div/form/div[4]/div/input";
+        internal const string TEST_TITLE_SELECTOR = "Blackcurrant";
+
+        //// Messages 
+        internal const string CONFIRMATION_TEXT = "Blackcurrant.";
+
+
+
     }
 }

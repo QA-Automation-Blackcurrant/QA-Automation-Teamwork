@@ -36,5 +36,13 @@ namespace Tests.Pages.LoginPage
             Assert.IsTrue(page.Elements.PromptForIncorrectPassword.Displayed);
             StringAssert.Contains(Constants.INCORRECT_PASSWORD, page.Elements.PromptForIncorrectPassword.Text);
         }
+
+        ////////////////////////////// Only for LoginWithCreatedArticle Test ///////////////////////////
+
+        public static void AssertConfirmTitle(this LoginPage page)
+        {
+            Assert.IsTrue(page.Elements.ConfirmationButton.Displayed);
+            StringAssert.Contains(Constants.CONFIRMATION_TEXT, page.Elements.ConfirmationButton.Text);
+        }
     }
 }
