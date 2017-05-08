@@ -1,7 +1,7 @@
 ﻿namespace Tests.Pages
 {
-    using OpenQA.Selenium;
     using System.Configuration;
+    using OpenQA.Selenium;
 
     public abstract class BasePage<T> where T : class
     {

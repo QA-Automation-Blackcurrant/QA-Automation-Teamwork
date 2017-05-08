@@ -1,14 +1,15 @@
-﻿using NUnit.Framework;
-using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-using System.Reflection;
-using Tests.Data;
-using Tests.Models;
-using Tests.Pages.LoginPage;
-using Tests.Utilities;
-
-namespace Tests
+﻿namespace Tests
 {
+    using System.Reflection;
+    using NUnit.Framework;
+    using OpenQA.Selenium;
+    using OpenQA.Selenium.Chrome;
+
+    using Tests.Data;
+    using Tests.Models;
+    using Tests.Pages.LoginPage;
+    using Tests.Utilities;
+
     [TestFixture]
     public class BlogLoginTests
     {
@@ -105,22 +106,6 @@ namespace Tests
 
             //// Assert
             loginPage.AssertIncorrectPassword();
-        }
-
-        [Test]
-        public void LoginWithCreatedArticle()
-        {
-            //// Arrange
-            var loginPage = new LoginPage(this.driver);
-            var dataReader = new DataReader<LoginUser>();
-            var user = dataReader.GetData(MethodBase.GetCurrentMethod().Name);
-
-            //// Act
-            loginPage.Open();
-            loginPage.SubmitForm(user);
-
-            //// Assert
-            loginPage.AssertConfirmTitle();
         }
     }
 }

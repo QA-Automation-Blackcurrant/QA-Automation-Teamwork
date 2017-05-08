@@ -1,5 +1,4 @@
-﻿
-namespace Tests.Models
+﻿namespace Tests.Models
 {
     public class LoginUser
     {
@@ -8,12 +7,5 @@ namespace Tests.Models
         public string Password { get; set; }
 
         public string RememberMe { get; set; }
-
-        ////////////////////////////// Only for LoginWithCreatedArticle Test ///////////////////////////
-
-        public string Title { get; set; }
-
-        public string Content { get; set; }
-
     }   
 }

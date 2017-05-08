@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using OpenQA.Selenium;
-using Tests.Models;
-
-namespace Tests.Pages.CreateArticlePage
+﻿namespace Tests.Pages.CreateArticlePage
 {
+    using OpenQA.Selenium;
+
+    using Tests.Models;
+    using Tests.Utilities;
+
     public class CreateArticlePage : BasePage<CreateArticlePageMap>
     {
         public CreateArticlePage(IWebDriver driver) : base(driver, new CreateArticlePageMap(driver))
@@ -21,6 +18,13 @@ namespace Tests.Pages.CreateArticlePage
                 return Constants.CREATE_ARTICLE_URL;
             }
         }
-        
+
+        public void SubmitForm(CreateArticle article)
+        {
+            this.Open();
+            this.Elements.Title.Type(article.Title);
+            this.Elements.Content.Type(article.Content);
+            this.Elements.CreateButton.Click();
+        }
     }
 }

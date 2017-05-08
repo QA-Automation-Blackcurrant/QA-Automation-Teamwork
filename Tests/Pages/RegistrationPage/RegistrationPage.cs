@@ -1,12 +1,12 @@
 ﻿namespace Tests.Pages.RegistrationPage
 {
+    using System;
     using System.Reflection;
     using OpenQA.Selenium;
 
     using Tests.Data;
     using Tests.Models;
     using Tests.Utilities;
-    using System;
 
     public class RegistrationPage : BasePage<RegistrationPageMap>
     {

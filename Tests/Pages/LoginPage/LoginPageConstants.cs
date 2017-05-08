@@ -3,7 +3,7 @@
     internal static class Constants
     {
         //// Common
-        internal const string REGISTRATION_URL = "Account/Register/";
+        internal const string REGISTRATION_URL = "Account/Login/";
         internal const int WAIT_SECCONDS = 20;
 
         //// Selectors
@@ -24,20 +24,5 @@
         internal const string ERROR_WITHOUT_EMAIL = "The Email field is required.";
         internal const string CHECK_EMAIL = "Hello admin@admin.com!";
         internal const string INCORRECT_PASSWORD = "Invalid login attempt.";
-
-        ////////////////////////////// Only for LoginWithCreatedArticle Test ///////////////////////////
-
-        //// Selectors
-        internal const string CREATE_ARTICLE_BUTTON_SELECTOR = "//*[@id=\"logoutForm\"]/ul/li[2]/a";
-        internal const string TITLE_BUTTON_SELECTOR = "Title";
-        internal const string CONTENT_BUTTON_SELECTOR = "Content";
-        internal const string CREATE_BUTTON_SELECTOR = "/html/body/div[2]/div/div/form/div[4]/div/input";
-        internal const string TEST_TITLE_SELECTOR = "Blackcurrant";
-
-        //// Messages 
-        internal const string CONFIRMATION_TEXT = "Blackcurrant.";
-
-
-
     }
 }

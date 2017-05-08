@@ -1,10 +1,8 @@
-﻿
-
-namespace Tests.Pages.LoginPage
+﻿namespace Tests.Pages.LoginPage
 {
+    using System;
     using OpenQA.Selenium;
     using OpenQA.Selenium.Support.UI;
-    using System;
 
     public class LoginPageMap
     {
@@ -24,7 +22,6 @@ namespace Tests.Pages.LoginPage
                 return this.driver.FindElement(By.Id(Constants.MAINLOGIN_SELECTOR));
             }
         }
-
 
         public IWebElement Email
         {
@@ -57,52 +54,6 @@ namespace Tests.Pages.LoginPage
                 return this.driver.FindElement(By.XPath(Constants.LOGIN_BUTTON_SELECTOR));
             }
         }
-
-        
-        /////////////////////// Only for LoginWithCreatedArticle Test /////////////////////////////
-        
-
-        public IWebElement CreateArticlenButton
-        {
-            get
-            {
-                return this.driver.FindElement(By.XPath(Constants.CREATE_ARTICLE_BUTTON_SELECTOR));
-            }
-        }
-
-        public IWebElement Title
-        {
-            get
-            {
-                return this.driver.FindElement(By.Id(Constants.TITLE_BUTTON_SELECTOR));
-            }
-        }
-
-        public IWebElement Content
-        {
-            get
-            {
-                return this.driver.FindElement(By.Id(Constants.CONTENT_BUTTON_SELECTOR));
-            }
-        }
-
-        public IWebElement CreateButton
-        {
-            get
-            {
-                return this.driver.FindElement(By.XPath(Constants.CREATE_BUTTON_SELECTOR));
-            }
-        }
-
-        public IWebElement ConfirmationButton
-        {
-            get
-            {
-                return this.driver.FindElement(By.XPath(Constants.TEST_TITLE_SELECTOR));
-            }
-        }
-
-        /////////////////////////////////////////////////////////////////////////////////
 
         public IWebElement ErrorMessagesEmail
         {

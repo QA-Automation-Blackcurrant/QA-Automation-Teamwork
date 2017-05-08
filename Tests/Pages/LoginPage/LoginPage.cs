@@ -46,13 +46,6 @@
             this.Elements.Password.Type(user.Password);
             this.Elements.RememberMe.Click();
             this.Elements.LogInButton.Click();
-
-            ///////////////// Only for LoginWithCreatedArticle Test ///////////////////
-
-            this.Elements.CreateArticlenButton.Click();
-            this.Elements.Title.Type(user.Title);
-            this.Elements.Content.Type(user.Content);
-            this.Elements.CreateButton.Click();
         }
     }
 }

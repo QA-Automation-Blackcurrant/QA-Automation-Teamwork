@@ -59,6 +59,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BlogArticleListTests.cs" />
     <Compile Include="BlogCreateArticleTests.cs" />
     <Compile Include="BlogLoginTests.cs" />
     <Compile Include="Data\DataReader.cs" />
@@ -66,6 +67,10 @@
     <Compile Include="Models\LoginUser.cs" />
     <Compile Include="Models\CreateArticle.cs" />
     <Compile Include="Models\RegistrationUser.cs" />
+    <Compile Include="Pages\ArticleListPage\ArticleListPage.cs" />
+    <Compile Include="Pages\ArticleListPage\ArticleListPageAsserter.cs" />
+    <Compile Include="Pages\ArticleListPage\ArticleListPageConstants.cs" />
+    <Compile Include="Pages\ArticleListPage\ArticleListPageMap.cs" />
     <Compile Include="Pages\BasePage.cs" />
     <Compile Include="Pages\CreateArticlePage\CreateArticlePage.cs" />
     <Compile Include="Pages\CreateArticlePage\CreateArticlePageAsserter.cs" />
