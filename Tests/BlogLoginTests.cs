@@ -3,7 +3,6 @@
     using System.Reflection;
     using NUnit.Framework;
     using OpenQA.Selenium;
-    using OpenQA.Selenium.Chrome;
 
     using Tests.Data;
     using Tests.Models;
@@ -18,7 +17,7 @@
         [SetUp]
         public void BeforeEachTest()
         {
-            this.driver = new ChromeDriver();
+            this.driver = BrowserHost.Instance.Application.Browser;
             this.driver.Manage().Window.Maximize();
         }
 

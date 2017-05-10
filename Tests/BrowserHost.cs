@@ -1,15 +1,17 @@
 ﻿namespace Tests
 {
+    using OpenQA.Selenium.Chrome;
+    using System.Configuration;
     using TestStack.Seleno.Configuration;
 
     public static class BrowserHost
     {
         public static readonly SelenoHost Instance = new SelenoHost();
-        public static readonly string RootUrl = @"http://localhost:60634/Article/List";
+        public static readonly string RootUrl = $"{ConfigurationManager.AppSettings["domain"]}";
 
         static BrowserHost()
         {
-            Instance.Run("Blog", 60639, w => w.WithRemoteWebDriver(BrowserFactory.Chrome));
+            Instance.Run("Blog", 60634, w => w.WithRemoteWebDriver(() => new ChromeDriver()));
         }
     }
 }

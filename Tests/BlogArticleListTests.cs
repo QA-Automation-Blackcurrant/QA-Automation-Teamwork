@@ -2,7 +2,6 @@
 {
     using NUnit.Framework;
     using OpenQA.Selenium;
-    using OpenQA.Selenium.Chrome;
 
     using Tests.Pages.ArticleListPage;
     using Tests.Utilities;
@@ -15,7 +14,7 @@
         [SetUp]
         public void BeforeEachTest()
         {
-            this.driver = new ChromeDriver();
+            this.driver = BrowserHost.Instance.Application.Browser;
             this.driver.Manage().Window.Maximize();
         }
 
