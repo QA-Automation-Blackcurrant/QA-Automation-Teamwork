@@ -41,6 +41,7 @@
 
             //// Assert
             createArticlePage.AssertThatPageIsOpened();
+            loginPage.LogOff();
         }
 
         [Test]

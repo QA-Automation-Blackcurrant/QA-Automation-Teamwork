@@ -17,7 +17,9 @@
         internal const string ERROR_EMAIL_REQUIRED_SELECTOR = "/html/body/div[2]/div/div/form/div[1]/div/span/span";
         internal const string SUCCESSFUL_LOGIN_SELECTOR = "a[href*='/Manage']";
         internal const string INCORRECT_PASSWORD_SELECTOR = "/html/body/div[2]/div/div/form/div[1]/ul/li";
-               
+        internal const string RIGHT_NAVIGATION_SELECTOR = "//*[@id=\"logoutForm\"]/ul";
+        internal const string SELECTABLE_LISTS_TAG_NAME_SELECTOR = "li";
+
         //// Messages 
         internal const string ERROR_PASSWORD = "The Password field is required.";
         internal const string ERROR_EMAIL = "The Email field is not a valid e-mail address.";

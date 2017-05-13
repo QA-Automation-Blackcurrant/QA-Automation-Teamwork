@@ -41,6 +41,7 @@
 
             //// Assert
             loginPage.AssertConfirmation();
+            loginPage.LogOff();
         }
 
         [Test]

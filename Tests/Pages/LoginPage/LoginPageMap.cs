@@ -1,6 +1,7 @@
 ﻿namespace Tests.Pages.LoginPage
 {
     using System;
+    using System.Linq;
     using OpenQA.Selenium;
     using OpenQA.Selenium.Support.UI;
 
@@ -52,6 +53,15 @@
             get
             {
                 return this.driver.FindElement(By.XPath(Constants.LOGIN_BUTTON_SELECTOR));
+            }
+        }
+
+        public IWebElement LogOffButton
+        {
+            get
+            {
+                this.wait.Until(ExpectedConditions.ElementExists(By.XPath(Constants.RIGHT_NAVIGATION_SELECTOR)));
+                return this.driver.FindElement(By.XPath(Constants.RIGHT_NAVIGATION_SELECTOR)).FindElements(By.TagName(Constants.SELECTABLE_LISTS_TAG_NAME_SELECTOR)).Last();
             }
         }
 

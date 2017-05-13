@@ -39,9 +39,13 @@
             this.SubmitForm(user);
         }
 
+        public void LogOff()
+        {
+            this.Elements.LogOffButton.Click();
+        }
+
         public void SubmitForm(LoginUser user)
         {
-            this.Elements.MainButton.Click();
             this.Elements.Email.Type(user.Email);
             this.Elements.Password.Type(user.Password);
             this.Elements.RememberMe.Click();
