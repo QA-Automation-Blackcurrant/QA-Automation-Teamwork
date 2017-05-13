@@ -1,6 +1,7 @@
 ﻿namespace Tests
 {
     using System.Configuration;
+    using OpenQA.Selenium.Chrome;
     using TestStack.Seleno.Configuration;
 
     public static class BrowserHost
@@ -10,7 +11,7 @@
 
         static BrowserHost()
         {
-            Instance.Run("Blog", 60634, w => w.WithRemoteWebDriver(BrowserFactory.FireFox));
+            Instance.Run("Blog", 60634, w => w.WithRemoteWebDriver(() => new ChromeDriver()));
         }
     }
 }
