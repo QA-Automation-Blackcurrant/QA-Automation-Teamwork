@@ -55,10 +55,10 @@
             {
                 if (TestContext.CurrentContext.Result.Outcome.Status == TestStatus.Failed)
                 {
-                    //logger.Log(NLog.LogLevel.Error, TestContext.CurrentContext.Result.Message);
-                    //var screenshot = ((ITakesScreenshot)driver).GetScreenshot();
-                    //screenshot.SaveAsFile($"{dirPath}\\{TestContext.CurrentContext.Test.Name}.jpg", ScreenshotImageFormat.Jpeg);
-                    BrowserHost.Instance.Application.TakeScreenshotAndThrow(TestContext.CurrentContext.Test.Name, TestContext.CurrentContext.Result.Message);
+                    logger.Log(NLog.LogLevel.Error, TestContext.CurrentContext.Result.Message);
+                    var screenshot = ((ITakesScreenshot)driver).GetScreenshot();
+                    screenshot.SaveAsFile($"{dirPath}\\{TestContext.CurrentContext.Test.Name}.jpg", ScreenshotImageFormat.Jpeg);
+                    //BrowserHost.Instance.Application.TakeScreenshotAndThrow(TestContext.CurrentContext.Test.Name, TestContext.CurrentContext.Result.Message);
                 }
                 else
                 {

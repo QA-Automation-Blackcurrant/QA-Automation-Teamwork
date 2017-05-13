@@ -24,7 +24,7 @@
         [TearDown]
         public void AfterEachTest()
         {
-            this.driver.Log().Quit();
+            this.driver.Log();
         }
 
         [Test]
