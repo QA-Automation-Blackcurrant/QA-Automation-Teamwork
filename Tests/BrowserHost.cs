@@ -10,7 +10,7 @@
 
         static BrowserHost()
         {
-            Instance.Run("Blog", 60634);
+            Instance.Run("Blog", 60634, w => w.WithRemoteWebDriver(BrowserFactory.FireFox));
         }
     }
 }
