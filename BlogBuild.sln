@@ -11,6 +11,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documents", "Documents", "{
 	ProjectSection(SolutionItems) = preProject
 		Documents\Teamwork_Conditions.docx = Documents\Teamwork_Conditions.docx
 		Documents\Test Plan.docx = Documents\Test Plan.docx
+		Documents\TestCases.xlsx = Documents\TestCases.xlsx
 	EndProjectSection
 EndProject
 Global
